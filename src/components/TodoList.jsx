@@ -1,7 +1,17 @@
 import React from 'react';
 
 const TodoList = () => {
-  return <ul><li>Sample Todo</li></ul>;
+    let todos = ["going", "eating","pick up"]
+  return (
+        <ul>
+            {todos.map((todo,todoIndex) =>{
+                return (
+                    <li key={todoIndex}>{todo}</li>
+                )
+            })}
+
+        </ul>  
+        );
 };
 
 export default TodoList;
